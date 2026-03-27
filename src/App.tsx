@@ -45,11 +45,8 @@ function App() {
           <div className="hero-panel">
             <div className="hero-panel-inner">
               <p className="panel-label">课程定位</p>
-              <h2>从原理、流程到开发实战</h2>
-              <p>
-                适合希望系统理解 UG/NX 五轴后处理的人，也适合需要继续做调试、
-                优化与开发的人。
-              </p>
+              <h2>{siteContent.hero.panelTitle}</h2>
+              <p>{siteContent.hero.panelDescription}</p>
               <div className="metrics">
                 {siteContent.hero.metrics.map((metric) => (
                   <article key={metric.value} className="metric-card">
@@ -65,7 +62,8 @@ function App() {
         <section className="section" id="value">
           <div className="section-heading section-heading-centered">
             <span className="eyebrow">课程价值</span>
-            <h2>不是堆知识点，而是建立一套可继续扩展的理解方式。</h2>
+            <h2>{siteContent.value.title}</h2>
+            <p>{siteContent.value.description}</p>
           </div>
 
           <div className="value-grid">
@@ -93,7 +91,8 @@ function App() {
         <section className="section" id="modules">
           <div className="section-heading section-heading-centered">
             <span className="eyebrow">课程模块</span>
-            <h2>用 4 个模块把五轴后处理的关键链路串起来。</h2>
+            <h2>{siteContent.modulesHeading.title}</h2>
+            <p>{siteContent.modulesHeading.description}</p>
           </div>
 
           <div className="module-grid">
@@ -116,10 +115,8 @@ function App() {
         <section className="section capability-section" id="capabilities">
           <div className="section-heading section-heading-centered">
             <span className="eyebrow">开发能力</span>
-            <h2>把教程理解延伸到真实的后处理开发问题。</h2>
-            <p>
-              页面不做“作品集堆砌”，而是直接说明你擅长解决哪些关键开发问题，让技术能力表达更克制也更可信。
-            </p>
+            <h2>{siteContent.capabilitiesHeading.title}</h2>
+            <p>{siteContent.capabilitiesHeading.description}</p>
           </div>
 
           <div className="capability-layout">
@@ -146,24 +143,11 @@ function App() {
         <section className="section" id="audience">
           <div className="section-heading section-heading-centered">
             <span className="eyebrow">适合谁</span>
-            <h2>适合想真正把后处理看懂、调通、继续做下去的人。</h2>
+            <h2>{siteContent.audienceHeading.title}</h2>
           </div>
 
           <div className="persona-grid">
-            {[
-              {
-                title: '刚进入五轴后处理',
-                description: '需要一套系统路径，先建立整体框架，再理解关键概念和流程。',
-              },
-              {
-                title: '已经在做调试',
-                description: '遇到 bug 或逻辑问题时，希望能快速定位，而不是反复试错。',
-              },
-              {
-                title: '希望继续做开发',
-                description: '想把模板、事件、算法和旋转轴逻辑真正转化成自己的能力。',
-              },
-            ].map((item) => (
+            {siteContent.personas.map((item) => (
               <article key={item.title} className="persona-card glass-card">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -179,10 +163,15 @@ function App() {
               <h2>{siteContent.contact.title}</h2>
               <p>{siteContent.contact.description}</p>
               <p className="contact-note">{siteContent.contact.note}</p>
-              <a className="button button-primary" href={siteContent.contact.qrImage} target="_blank" rel="noreferrer">
-                点击查看二维码大图
+              <a
+                className="button button-primary"
+                href={siteContent.contact.qrImage}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {siteContent.contact.buttonLabel}
               </a>
-              <p className="scan-tip">手机端可长按识别，桌面端可扫码添加。</p>
+              <p className="scan-tip">{siteContent.contact.tip}</p>
             </div>
 
             <div className="qr-card">
@@ -196,12 +185,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-

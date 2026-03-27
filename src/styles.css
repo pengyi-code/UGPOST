@@ -1,7 +1,7 @@
 ﻿:root {
   color-scheme: dark;
   font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
-  line-height: 1.5;
+  line-height: 1.55;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,10 +13,10 @@
   --line: rgba(172, 193, 214, 0.15);
   --line-strong: rgba(172, 193, 214, 0.25);
   --text: #ecf1f6;
-  --muted: #9ca8b5;
+  --muted: #a7b4c1;
   --accent: #8fb5d9;
-  --accent-strong: #b7d4ef;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  --accent-strong: #d7e8f7;
+  --shadow: 0 26px 80px rgba(0, 0, 0, 0.42);
   background: var(--bg);
   color: var(--text);
 }
@@ -60,7 +60,7 @@ img {
   height: 34rem;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.18;
+  opacity: 0.16;
   pointer-events: none;
   z-index: 0;
 }
@@ -81,10 +81,10 @@ img {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
   background-size: 64px 64px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 82%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 82%);
   pointer-events: none;
   z-index: 0;
 }
@@ -105,7 +105,7 @@ main {
   gap: 1.5rem;
   padding: 1rem clamp(1.2rem, 4vw, 3rem);
   backdrop-filter: blur(18px);
-  background: rgba(8, 11, 15, 0.68);
+  background: rgba(8, 11, 15, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -125,17 +125,17 @@ main {
 
 .brand-text {
   display: grid;
-  gap: 0.05rem;
+  gap: 0.08rem;
 }
 
 .brand-text strong {
-  font-size: 1.18rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
 }
 
 .brand-text span {
-  font-size: 1.18rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -144,11 +144,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 1.2rem;
+  gap: 1.1rem;
 }
 
 .site-nav a {
-  font-size: 1.22rem;
+  font-size: 0.96rem;
   color: var(--muted);
   transition: color 180ms ease;
 }
@@ -165,13 +165,13 @@ main {
 }
 
 .section {
-  padding: clamp(4rem, 10vw, 7rem) 0;
+  padding: clamp(4.5rem, 9vw, 7rem) 0;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  gap: clamp(1.75rem, 3vw, 3rem);
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: clamp(2rem, 3vw, 3.5rem);
   align-items: center;
   min-height: calc(100vh - 76px);
   padding-top: clamp(3rem, 8vw, 6rem);
@@ -180,7 +180,7 @@ main {
 .eyebrow,
 .panel-label {
   display: inline-block;
-  font-size: 1.18rem;
+  font-size: 0.88rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent-strong);
@@ -193,13 +193,13 @@ main {
   margin: 0;
   font-weight: 700;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
 }
 
 .hero h1 {
   margin-top: 1rem;
-  max-width: 7ch;
-  font-size: clamp(2.9rem, 6vw, 4.9rem);
+  max-width: 8ch;
+  font-size: clamp(3.05rem, 6.5vw, 5rem);
 }
 
 .hero-description,
@@ -209,31 +209,38 @@ main {
 .persona-card p,
 .contact-card p,
 .hero-panel p,
-.value-card p {
+.value-card p,
+.tag,
+.metric-card span,
+.site-nav a,
+.contact-note,
+.scan-tip {
   color: var(--muted);
 }
 
 .hero-description {
-  margin: 1.4rem 0 0;
-  max-width: 42rem;
-  font-size: clamp(1.15rem, 1.55vw, 1.32rem);
+  margin: 1.35rem 0 0;
+  max-width: 40rem;
+  font-size: clamp(1.02rem, 1.4vw, 1.14rem);
+  line-height: 1.9;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 0.95rem;
+  margin-top: 2.1rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.1rem;
-  padding: 0.85rem 1.35rem;
+  min-height: 3.15rem;
+  padding: 0.9rem 1.45rem;
   border-radius: 999px;
   border: 1px solid transparent;
+  font-size: 0.98rem;
   font-weight: 600;
   transition:
     transform 180ms ease,
@@ -247,7 +254,7 @@ main {
 }
 
 .button-primary {
-  background: linear-gradient(180deg, #9ec1e3, #7da0c1);
+  background: linear-gradient(180deg, #a8c8e6, #7f9fbe);
   color: #071019;
   box-shadow: 0 12px 30px rgba(129, 163, 196, 0.24);
 }
@@ -280,24 +287,29 @@ main {
 }
 
 .hero-panel-inner {
-  padding: 1.5rem;
+  padding: 1.65rem;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
     linear-gradient(180deg, rgba(17, 24, 33, 0.86), rgba(17, 24, 33, 0.72));
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  min-height: auto;
 }
 
 .hero-panel h2 {
   margin-top: 0.85rem;
-  font-size: clamp(1.72rem, 2.4vw, 2.2rem);
+  font-size: clamp(1.55rem, 2.2vw, 1.95rem);
+}
+
+.hero-panel p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.82;
 }
 
 .metrics {
   display: grid;
-  gap: 0.95rem;
-  margin-top: 1.75rem;
+  gap: 0.9rem;
+  margin-top: 1.65rem;
 }
 
 .metric-card {
@@ -309,58 +321,65 @@ main {
 
 .metric-card strong {
   display: block;
-  margin-bottom: 0.35rem;
-  font-size: 1.24rem;
+  margin-bottom: 0.32rem;
+  font-size: 1rem;
 }
 
 .metric-card span {
-  color: var(--muted);
-  font-size: 1.22rem;
+  font-size: 0.94rem;
 }
 
 .section-heading {
   max-width: 48rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.6rem;
+}
+
+.section-heading-centered {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading-centered p {
+  margin-inline: auto;
 }
 
 .section-heading h2 {
-  margin-top: 0.85rem;
-  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin-top: 0.8rem;
+  font-size: clamp(2rem, 3vw, 2.85rem);
 }
 
 .section-heading p,
 .module-body p,
 .persona-card p,
 .contact-card p,
-.hero-panel p,
 .value-card p {
-  font-size: 1.18rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.82;
 }
 
-.capability-panel li {
-  font-size: 1.3rem;
-  line-height: 1.75;
+.section-heading p {
+  max-width: 42rem;
+  margin-top: 1rem;
 }
 
 .value-grid,
 .persona-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.35rem;
 }
 
 .value-card,
 .persona-card {
   position: relative;
-  padding: 1.4rem;
+  padding: 1.6rem;
 }
 
 .card-index {
   display: inline-flex;
-  width: 2.75rem;
-  height: 2.75rem;
-  margin-bottom: 1.2rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  margin-bottom: 1.25rem;
   border-radius: 50%;
   background: linear-gradient(180deg, rgba(183, 212, 239, 0.3), rgba(143, 181, 217, 0.08));
   border: 1px solid rgba(183, 212, 239, 0.22);
@@ -370,17 +389,23 @@ main {
 .module-body h3,
 .persona-card h3 {
   margin: 0;
-  font-size: 1.38rem;
+  font-size: 1.3rem;
+}
+
+.value-card p,
+.persona-card p,
+.module-body p {
+  margin-top: 0.9rem;
 }
 
 .audience-strip {
-  margin-top: 1.2rem;
-  padding: 1.2rem;
+  margin-top: 1.35rem;
+  padding: 1.35rem;
 }
 
 .strip-title {
-  margin: 0 0 0.95rem;
-  font-size: 1.22rem;
+  margin: 0 0 1rem;
+  font-size: 0.94rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-strong);
@@ -389,22 +414,21 @@ main {
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.85rem;
 }
 
 .tag {
-  padding: 0.75rem 0.95rem;
+  padding: 0.78rem 1rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
-  color: #d6e1ea;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 1.22rem;
+  font-size: 0.98rem;
 }
 
 .module-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 1.35rem;
 }
 
 .module-card {
@@ -448,33 +472,39 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: var(--accent-strong);
   font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .module-body {
-  padding: 1.3rem 1.35rem 1.45rem;
+  padding: 1.45rem 1.45rem 1.55rem;
 }
 
 .capability-layout {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 1.2rem;
+  gap: 1.35rem;
 }
 
 .capability-panel {
-  padding: 1.4rem;
+  padding: 1.6rem;
 }
 
 .line-list {
   list-style: none;
   padding: 0;
-  margin: 1.15rem 0 0;
+  margin: 1.2rem 0 0;
   display: grid;
-  gap: 0.8rem;
+  gap: 0.75rem;
+}
+
+.capability-panel li {
+  font-size: 1.04rem;
+  line-height: 1.8;
 }
 
 .line-list li {
   position: relative;
-  padding: 0.95rem 0 0.95rem 1.25rem;
+  padding: 1rem 0 1rem 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -482,16 +512,12 @@ main {
   content: "";
   position: absolute;
   left: 0;
-  top: 1.32rem;
-  width: 0.45rem;
-  height: 0.45rem;
+  top: 1.45rem;
+  width: 0.42rem;
+  height: 0.42rem;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 18px rgba(143, 181, 217, 0.4);
-}
-
-.persona-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .contact-section {
@@ -500,9 +526,9 @@ main {
 
 .contact-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 360px);
-  gap: 1.5rem;
-  padding: clamp(1.3rem, 3vw, 1.8rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 340px);
+  gap: 1.8rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
 }
 
 .contact-copy {
@@ -513,11 +539,15 @@ main {
 
 .contact-note,
 .scan-tip {
-  font-size: 1.18rem;
+  font-size: 0.98rem;
+}
+
+.contact-note {
+  margin-top: 0.4rem;
 }
 
 .scan-tip {
-  margin-top: 0.8rem;
+  margin-top: 0.85rem;
   color: var(--accent-strong);
 }
 
@@ -525,9 +555,9 @@ main {
   align-self: center;
   justify-self: center;
   max-width: 320px;
-  padding: 0.85rem;
+  padding: 0.95rem;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .qr-card img {
@@ -551,7 +581,7 @@ main {
   }
 
   .hero h1 {
-    max-width: 12ch;
+    max-width: 10ch;
   }
 
   .site-header {
@@ -574,11 +604,11 @@ main {
   }
 
   .site-nav {
-    gap: 0.8rem 1rem;
+    gap: 0.75rem 1rem;
   }
 
   .site-nav a {
-    font-size: 1.14rem;
+    font-size: 0.94rem;
   }
 
   .section {
@@ -590,30 +620,36 @@ main {
   }
 
   .hero h1 {
-    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-size: clamp(2.6rem, 12vw, 4rem);
   }
 
   .section-heading h2 {
-    font-size: clamp(1.95rem, 8.2vw, 2.7rem);
+    font-size: clamp(1.8rem, 8.2vw, 2.45rem);
   }
 
   .button {
     width: 100%;
   }
 
+  .eyebrow,
+  .panel-label,
+  .strip-title {
+    font-size: 0.82rem;
+  }
+
+  .section-heading p,
+  .value-card p,
+  .module-body p,
+  .persona-card p,
+  .contact-card p,
+  .hero-description,
+  .hero-panel p,
+  .capability-panel li,
+  .tag {
+    font-size: 0.98rem;
+  }
+
   .qr-card {
     max-width: 100%;
   }
 }
-
-
-
-
-
-
-
-.section-heading-centered {
-  margin-inline: auto;
-  text-align: center;
-}
-
