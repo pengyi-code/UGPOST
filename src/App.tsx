@@ -163,14 +163,7 @@ function App() {
               <h2>{siteContent.contact.title}</h2>
               <p>{siteContent.contact.description}</p>
               <p className="contact-note">{siteContent.contact.note}</p>
-              <a
-                className="button button-primary"
-                href={siteContent.contact.qrImage}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {siteContent.contact.buttonLabel}
-              </a>
+
               <p className="scan-tip">{siteContent.contact.tip}</p>
             </div>
 
@@ -185,3 +178,4 @@ function App() {
 }
 
 export default App;
+

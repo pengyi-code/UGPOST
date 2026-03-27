@@ -130,7 +130,6 @@ export const siteContent = {
     description:
       '如果你想了解教程细节、学习路径，或有后处理相关开发需求，可以直接通过微信联系。',
     note: '微信昵称：迷舟 · 湖北武汉',
-    buttonLabel: '查看二维码大图',
     tip: '手机端可长按识别，桌面端可直接扫码添加。',
     qrImage: wechatQr,
     qrAlt: '微信二维码',
@@ -138,3 +137,4 @@ export const siteContent = {
 };
 
 export type SiteContent = typeof siteContent;
+
